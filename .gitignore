@@ -38,6 +38,9 @@ out/
 
 ### Kotlin ###
 .kotlin
+# temp file
+*.kt0
+*.kt1
 
 
 ### ... ###

@@ -25,6 +25,14 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
+
+	// https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc
+	implementation("org.xerial:sqlite-jdbc:3.50.3.0")
+	// https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-community-dialects
+	// implementation("org.hibernate.orm:hibernate-community-dialects:6.6.22.Final")
+	// https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator
+	// implementation("org.hibernate.validator:hibernate-validator:8.0.1.Final")
 }
 
 application {
