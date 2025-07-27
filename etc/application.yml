@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: sqlite-browser
+
+logging:
+  file:
+    name: var/log/${spring.application.name}.log
+  logback:
+    rollingpolicy:
+      max-history: 130
+      max-file-size: 10MB
+  pattern:
+    # dateformat: yyyy-MM-dd'T'HH:mm:ss.SSSX,UTC+8
+    # console: "%d{yyyy-MM-dd'T'HH:mm:ss.SSSXXX} %5p ${PID} [%-25t] %-40.40logger{39}--- %m%n"
+    console: "%d{yyyy-MM-dd'T'HH:mm:ss.SSSX} %clr(%5p) ${PID} --- [${spring.application.name}] : %m%n"
+    file: "%d{yyyy-MM-dd'T'HH:mm:ss.SSSX} %5p ${PID} --- [${spring.application.name}] : %m%n"

@@ -1,0 +1,43 @@
+
+
+sqlite-browser full stack app
+ - springboot/kotin - backend
+ - react - frontend
+ - laravel - test sqlite db generator 
+
+
+application package name = idv.xcplay.sqlitebrowser
+
+sqlite-browser/                  # root folder
+├── etc/
+│   ├── db/                      # *.sqlite to view
+│   └── application.yml          # spring boot config
+│
+├── backend/                     # Spring Boot + Kotlin
+│   ├── build.gradle.kts
+│   ├── settings.gradle.kts
+│   └── src/
+│
+├── frontend/                    # React (Vite / ...)
+│   ├── package.json
+│   ├── vite.config.ts           # or webpack.config.js
+│   ├── public/
+│   └── src/
+│
+├── laravel-db-tools/            # Laravel to generate etc/db/*.sqlite
+│   ├── config/
+│   │   └── database.php         #
+│   ├── database/
+│   │   ├── factories/           # 
+│   │   ├── migration-meta/      # to etc/db/db-meta.sqlite
+│   │   ├── migrations/          # to etc/db/database.sqlite
+│   │   └── seeders/             #
+│   └── artisan
+│
+├── build.gradle.kts
+├── settings.gradle.kts
+├── README.md
+└── scripts/                     # optional build/script
+
+
+
