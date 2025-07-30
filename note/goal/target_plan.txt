@@ -24,6 +24,10 @@ sqlite-browser/                  # root folder
 │   ├── public/
 │   └── src/
 │
+├── laravel-backend/             # same backend/api as springboot backend
+│   ├── ...
+│   └── artisan
+│
 ├── laravel-db-tools/            # Laravel to generate etc/db/*.sqlite
 │   ├── config/
 │   │   └── database.php         #
