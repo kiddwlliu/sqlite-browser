@@ -13,7 +13,8 @@ class DatabaseController {
     @Value("\${db.folder:etc/db}")
     private lateinit var dbFolder: String
 
-    private val validNameRegex = Regex("^[a-zA-Z0-9_]+\\.sqlite\$")
+    // private val validNameRegex = Regex("^[a-zA-Z0-9_]+\\.sqlite\$")
+    private val validNameRegex = Regex("^[a-zA-Z0-9_]+\\.(sqlite|db)\$")
     private val validTableRegex = Regex("^[a-zA-Z0-9_]+\$")
 
     @GetMapping
@@ -22,7 +23,8 @@ class DatabaseController {
         if (!folder.exists() || !folder.isDirectory) return emptyList()
 
         return folder.listFiles { file ->
-            file.isFile && file.name.endsWith(".sqlite") && validNameRegex.matches(file.name)
+            (file.isFile && file.name.endsWith(".sqlite") || file.isFile && file.name.endsWith(".db"))
+             && validNameRegex.matches(file.name)
         }?.map { it.name } ?: emptyList()
     }
 
