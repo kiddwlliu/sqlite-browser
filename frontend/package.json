@@ -7,6 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "cp-spa-httpd": "cp -r dist/* ~/work/local_repos/httpd-www/spa",
+    "cp-spa-local": "cp -r dist/* ../var/static/spa",
     "preview": "vite preview"
   },
   "dependencies": {

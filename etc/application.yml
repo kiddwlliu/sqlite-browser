@@ -3,7 +3,7 @@ spring:
     name: sqlite-browser
   web:
     resources:
-      static-locations: file:./frontend/dist
+      static-locations: file:./var/static
   mvc.pathmatch.matching-strategy: ant_path_matcher
 
 db:
